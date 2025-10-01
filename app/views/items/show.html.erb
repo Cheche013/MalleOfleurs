@@ -8,3 +8,5 @@
 
   <%= button_to "Destroy this item", @item, method: :delete %>
 </div>
+
+<%= button_to "Acheter avec Stripe", checkout_path(item_id: @item.id), method: :post, data: { turbo: false } %>

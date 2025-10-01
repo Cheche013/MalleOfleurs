@@ -9,5 +9,5 @@
 # end
 
 100.times do |index|
-  Item.create(title: "Nom#{index}", description: "blabla#{index}")
+  Item.create(title: "Nom#{index}", description: "blabla#{index}", price: rand(500..5000))
 end
