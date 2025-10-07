@@ -8,3 +8,75 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+
+html {
+  scroll-behavior: smooth;
+}
+
+.page-with-sidebar {
+  min-height: 100vh;
+  background-color: #fdfdfb;
+}
+
+.page-wrapper {
+  display: flex;
+  align-items: stretch;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 280px;
+  min-height: 100vh;
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+}
+
+.sidebar__inner {
+  min-height: 100vh;
+}
+
+.sidebar__nav .nav-link {
+  font-weight: 500;
+}
+
+.sidebar__nav .nav-link:hover,
+.sidebar__nav .nav-link:focus {
+  color: #0d6efd;
+}
+
+.page-content {
+  padding: 2rem 3rem;
+  background-color: #ffffff;
+}
+
+.visually-hidden-focusable:not(:focus):not(:focus-within) {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  border: 0 !important;
+}
+
+@media (max-width: 991.98px) {
+  .page-wrapper {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    position: relative;
+    min-height: auto;
+  }
+
+  .sidebar__inner {
+    min-height: auto;
+  }
+
+  .page-content {
+    padding: 1.5rem 1rem;
+  }
+}
